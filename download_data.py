@@ -6,13 +6,7 @@ import re
 import urllib.parse
 
 def download_and_rename_zips(json_file, download_dir="RNABricks Data"):
-    """
-    Downloads each zip file from the links in the JSON and renames it.
-
-    Args:
-        json_file (str): Path to the JSON file.
-        download_dir (str): Directory to save the downloaded and renamed zip files.
-    """
+    
     script_dir = os.path.dirname(os.path.abspath(__file__))
     json_path = os.path.join(script_dir, json_file)
     download_path = os.path.join(script_dir, download_dir)
@@ -36,7 +30,6 @@ def download_and_rename_zips(json_file, download_dir="RNABricks Data"):
                             response = requests.get(download_link, stream=True)
                             response.raise_for_status()
 
-                            # Determine the output filename
                             zip_filename = f"{rna_id}.zip"
                             if link_counter > 1:
                                 zip_filename = f"{rna_id}({link_counter}).zip"
@@ -69,5 +62,5 @@ def download_and_rename_zips(json_file, download_dir="RNABricks Data"):
         pass
 
 if __name__ == "__main__":
-    json_file_name = "RNA Data Links.json"  # Replace with the actual name of your JSON file
+    json_file_name = "RNA Data Links.json"
     download_and_rename_zips(json_file_name)
