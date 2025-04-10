@@ -7,6 +7,6 @@ While large amounts of research has been done to predict the 3D structure of pro
 
 Running the downloader only requires the json library (as far as external python libraries go), and can be run in the command prompt or terminal. All zip files will be stored in the "RNANricks Data" folder.
 
-python ./RNABricks-Dataset-Downloader/download_data.py
+```python ./RNABricks-Dataset-Downloader/download_data.py```
 
 All of the specific RNA IDs are also in this repository for referece.
