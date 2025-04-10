@@ -11,4 +11,4 @@ Running the downloader only requires the json library (as far as external python
 python ./RNABricks-Dataset-Downloader/download_data.py
 ```
 
-All of the specific RNA IDs are also in this repository for referece.
+All of the specific RNA IDs are also in this repository for reference.
